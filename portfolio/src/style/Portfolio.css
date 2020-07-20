@@ -1,0 +1,59 @@
+.border {
+    margin-top: 3%;
+    border-top: solid rgba(175, 171, 171, 0.801) 5px;
+    border-radius: 5px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Portfolio h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #0061d7;
+    text-transform: uppercase;
+}
+.Portfolio h3 {
+    text-align: center;
+    color: #39b9de;
+    font-style: italic;
+}
+
+.portfolio {
+    display: flex;
+}
+
+/*Les porjets*/
+.projet {
+    margin-left: 2%;
+    margin-right: auto;
+    width: 39%;
+}
+
+.projet2 {
+    margin-right: auto;
+    width: 35%;
+}
+
+.projet3 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+}
+
+.projet4 {
+    margin-left: 2%;
+    margin-right: auto;
+    width: 45%;
+}
+
+.projet5 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.projet6 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}

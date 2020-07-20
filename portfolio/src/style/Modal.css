@@ -1,0 +1,138 @@
+.popupPuissance {
+    margin-left: 6%;
+    margin-right: auto;
+    padding: 10px;
+    background-color: #39bade4b;
+    border-radius: 10px;
+    width: 72%;
+    display: flex;
+}
+
+.popupSnap {
+    margin-left: 7%;
+    margin-right: auto;
+    padding: 10px;
+    background-color: #39bade4b;
+    border-radius: 10px;
+    width: 75%;
+    display: flex;
+}
+
+.popupCine {
+    margin-left: 12%;
+    margin-right: auto;
+    padding: 10px;
+    background-color: #39bade4b;
+    border-radius: 10px;
+    width: 70%;
+    display: flex;
+}
+
+.popupTweet {
+    margin-left: 7%;
+    margin-right: auto;
+    padding: 10px;
+    background-color: #39bade4b;
+    border-radius: 10px;
+    width: 74%;
+    display: flex;
+}
+
+.popupMeetic {
+    margin-left: 14%;
+    margin-right: auto;
+    padding: 10px;
+    background-color: #39bade4b;
+    border-radius: 10px;
+    width: 82%;
+    display: flex;
+}
+
+
+.popupBlog {
+    margin-left: 24%;
+    margin-right: auto;
+    padding: 10px;
+    background-color: #39bade4b;
+    border-radius: 10px;
+    width: 62%;
+    display: flex;
+}
+
+.react-slidedown.my-dropdown-slidedown {
+    transition-duration: 0.7s;
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+
+.popup_inner p{
+    margin-left: 20px;
+}
+
+video{
+    width: 400px;
+    height: 300px; 
+}
+
+@media screen and (min-width:1250px) and (max-width:1600px) {
+
+    video {
+        width: 300px;
+    }
+
+
+}
+
+@media screen and (min-width:870px) and (max-width:1250px) {
+
+    video {
+        width: 200px;
+        height: 100px;
+    }
+    
+}
+
+@media screen and (min-width:100px) and (max-width:870px) {
+
+    video {
+        width: 100px;
+        height: 100px;
+    }
+    .popupPuissance {
+        margin-left: 1%;
+        width: 79%;
+        display: flex;
+    }  
+    .popupMeetic h1{
+        font-size: 25px;
+    }  
+
+    .popupSnap {
+        margin-left: 3%;
+    }
+    
+    .popupCine {
+        margin-left: 8%;
+    }
+    .popupCine h1, .popupSnap h1, .popupTweet h1, .popupBlog h1,  .popupPuissance h1{
+        font-size: 20px;
+    }
+    
+    .popupTweet {
+        margin-left: 3%;
+        width: 74%;
+    }
+    
+    .popupMeetic {
+        margin-left: 9%;
+        width: 87%;
+    }
+    
+    .popupBlog {
+        margin-left: 21%;
+        width: 60%;
+    }
+
+    .popup_inner p{
+        margin-left: 4px;
+    }
+}

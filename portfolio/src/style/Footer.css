@@ -1,0 +1,33 @@
+.footer{
+    margin-top: 100px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.footer h1{
+    margin:0 auto;
+    font-size: 350%;
+    color: #fff;
+}
+
+.foot{
+    margin-top: 3%;
+    border-top: solid rgb(129, 129, 129) 1px;
+    border-radius: 5px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.copyright {
+    margin-top: 4%;
+    color: #fff;
+}
+
+.credits {
+    color:#fff;
+}
+
+span{
+    color: black;
+}

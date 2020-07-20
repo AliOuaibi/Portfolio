@@ -1,0 +1,46 @@
+.header {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 300px;
+}
+.header h1 {
+    margin:0;
+    font-size: 4rem;
+    color: #fff;
+}
+
+.header p {
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: #fff;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.header a {
+    box-shadow: O 3px 3px 0 rgba(0,0,0,.1);
+    font-weight: 700;
+    background-color: #0061d7;
+    border-color: #0061d7;
+    color: #fff;
+    padding: 1.25rem 2.5rem;
+    text-decoration: none;
+    border-radius: .25rem;
+    display: inline-block;
+}
+
+.Logo {
+    overflow:hidden;
+    -moz-box-shadow: 0px 0px 10px #fff;
+	-webkit-box-shadow: 0px 0px 10px #fff;
+	-o-box-shadow: 0px 0px 10px #fff;
+	box-shadow: 0px 0px 10px #fff;
+    -webkit-border-radius:80px;
+    -moz-border-radius:80px;
+    border-radius:120px;
+    width:170px;
+    height:170px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
