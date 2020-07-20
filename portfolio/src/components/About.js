@@ -44,7 +44,7 @@ class About extends Component {
                     <h3>Hobbies</h3>
                     <p>Je suis quelqu'un qui aime beaucoup le sport comme le football, la salle de fitness, la boxe, le tennis. J'aime voyager à travers les pays du monde, découvrir de nouveaux horizons et 
                         de cultures. Grand fan de jeux vidéo aussi, quand j'ai du temps libre je me l'accorde avec ma playstation4 et c'est partit pour jouer en ligne. ALLEZ AU CINÉMA, AU RESTAURANT, SORTIR EN SOIRÉE AVEC LES AMI(E)S ET LA FAMILLE.
-                         J'ai une passion aussi pour la cuisine. </p>
+                         J'ai une passion aussi pour la cuisine.   </p>
                 </div>
             </div>
         );
