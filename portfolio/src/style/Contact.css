@@ -19,7 +19,6 @@ input, textarea {
 }
 
 .button-submit {
-    box-shadow: O 2px 2px 0 rgba(0,0,0,.1);
     font-weight: 700;
     font-size: 13px;
     background-color: #0061d7;
@@ -29,4 +28,17 @@ input, textarea {
     text-decoration: none;
     border-radius: .25rem;
     display: inline-block;
+}
+
+@media screen and (min-width:300px) and (max-width:650px) {
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .button-submit {
+        font-weight: 600;
+        font-size: 11px;
+    }
+  
 }

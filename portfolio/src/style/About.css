@@ -49,12 +49,25 @@
 }
 
 
-@media screen and (min-width:300px) and (max-width:1250px) {
+@media screen and (min-width:300px) and (max-width:650px) {
 
     .paragraphe{
-        max-width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+        max-width: 80%;
+    }
+
+    .about h1 {
+        font-size: 20px;
+
+    }
+
+    .about h3 {
+        margin-top: 20px;
+        font-size: 15px;
+    }
+
+    .about p {
+        text-align: left;
+        font-size: 10px;
     }
     
 }

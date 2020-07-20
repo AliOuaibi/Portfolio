@@ -57,3 +57,14 @@
     margin-right: auto;
     width: 50%;
 }
+
+@media screen and (min-width:300px) and (max-width:650px) {
+
+    .Portfolio h2 {
+        font-size: 20px;
+    }
+    .Portfolio h3 {
+        font-size: 14px;
+    }
+  
+}
