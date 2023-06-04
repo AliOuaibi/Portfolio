@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component, useState} from 'react';
 import '../style/Portfolio.css';
 import Puissance from '../img/portfolio/ps4.png'
 import Snap from '../img/portfolio/snap.png'
@@ -14,199 +14,128 @@ import CineModal from './CineModal';
 import MeeticModal from './MeeticModal';
 
 const puissance = {
-    borderRadius: '10px',
-    width: '90%',
-    cursor: 'pointer'
+  borderRadius: '10px',
+  width: '90%',
+  cursor: 'pointer'
 }
 const snap = {
-    borderRadius: '10px',
-    width: '92%',
-    cursor: 'pointer'
+  borderRadius: '10px',
+  width: '92%',
+  cursor: 'pointer'
 }
 const cine = {
-    borderRadius: '10px',
-    width: '82%',
-    marginLeft:'7%',
-    cursor: 'pointer'
+  borderRadius: '10px',
+  width: '82%',
+  marginLeft: '7%',
+  cursor: 'pointer'
 }
 const tweet = {
-    borderRadius: '10px',
-    width: '92%',
-    cursor: 'pointer'
+  borderRadius: '10px',
+  width: '92%',
+  cursor: 'pointer'
 }
 const meetic = {
-    width: '100%',
-    marginLeft:'7%',
-    borderRadius: '10px',
-    cursor: 'pointer'
+  width: '100%',
+  marginLeft: '7%',
+  borderRadius: '10px',
+  cursor: 'pointer'
 }
 const blog = {
-    width: '71%',
-    marginLeft:'20%',
-    borderRadius: '10px',
-    cursor: 'pointer'
+  width: '71%',
+  marginLeft: '20%',
+  borderRadius: '10px',
+  cursor: 'pointer'
 }
 
-class Portfolio extends Component {
-    constructor() { 
-        super(); 
+function Portfolio() {
+  const [showPopup, setShowPopup] = useState(false);
+  const [showPopup2, setShowPopup2] = useState(false);
+  const [showPopup3, setShowPopup3] = useState(false);
+  const [showPopup4, setShowPopup4] = useState(false);
+  const [showPopup5, setShowPopup5] = useState(false);
+  const [showPopup6, setShowPopup6] = useState(false);
 
-        this.state = { 
-            showPopup: false,
-            showPopup2: false,
-            showPopup3: false,
-            showPopup4: false,
-            showPopup5: false,
-            showPopup6: false,
-         }; 
-        } 
+  const togglePopup = (popupState, setPopupState) => {
+    setPopupState(!popupState);
+  }
 
-    togglePopup() {
-        this.setState({
-            showPopup: !this.state.showPopup,
-            showPopup2: false,
-            showPopup3: false,
-            showPopup4: false,
-            showPopup5: false,
-            showPopup6: false,
-        });
-    }  
+  return (
+    <div className="Portfolio">
+      <div className="border"></div>
+      <h2>PORTFOLIO</h2>
+      <h3>Voici des projets réalisés au cours de ma première année</h3>
 
-    togglePopup2() {
-        this.setState({
-            showPopup2: !this.state.showPopup2,
-            showPopup: false,
-            showPopup3: false,
-            showPopup4: false,
-            showPopup5: false,
-            showPopup6: false,
-        });
-    } 
+      <div className="portfolio">
+        <div className="projet">
+          <h3>My_puissance4</h3>
+          <img style={puissance} src={Puissance} onClick={() => togglePopup(showPopup, setShowPopup)}/>
+          {showPopup ?
+            <PuissanceModal
+              text='Description'
+            />
+            : null
+          }
+        </div>
 
-    togglePopup3() {
-        this.setState({
-            showPopup3: !this.state.showPopup3,
-            showPopup2: false,
-            showPopup: false,
-            showPopup4: false,
-            showPopup5: false,
-            showPopup6: false,
-        });
-    }  
+        <div className="projet2">
+          <h3>My_Snapchat</h3>
+          <img style={snap} src={Snap} onClick={() => togglePopup(showPopup2, setShowPopup2)}/>
+          {showPopup2 ?
+            <SnapModal
+              text='Description'
+            />
+            : null
+          }
+        </div>
 
-    togglePopup4() {
-        this.setState({
-            showPopup4: !this.state.showPopup4,
-            showPopup2: false,
-            showPopup3: false,
-            showPopup: false,
-            showPopup5: false,
-            showPopup6: false,
-        });
-    }   
-
-    togglePopup5() {
-        this.setState({
-            showPopup5: !this.state.showPopup5,
-            showPopup2: false,
-            showPopup3: false,
-            showPopup4: false,
-            showPopup: false,
-            showPopup6: false,
-        });
-    }    
-
-    togglePopup6() {
-        this.setState({
-            showPopup6: !this.state.showPopup6,
-            showPopup2: false,
-            showPopup3: false,
-            showPopup4: false,
-            showPopup5: false,
-            showPopup: false,
-        });
-    }               
-         
-    render() { 
-        
-        return ( 
-            <div className="Portfolio">
-                <div className="border" ></div>
-                <h2>PORTFOLIO</h2>
-                <h3>Voici des projets réalisés au cours de ma première année</h3>
-
-                <div className="portfolio">
-                    <div className="projet">
-                        <h3>My_puissance4</h3>
-                        <img style={puissance} src={Puissance} onClick={this.togglePopup.bind(this)}/>
-                        {this.state.showPopup ? 
-                        <PuissanceModal
-                            text='Description'
-                        />
-                        : null
-                        }    
-                    </div>
-
-                    <div className="projet2">
-                        <h3>My_Snapchat</h3>
-                        <img style={snap} src={Snap} onClick={this.togglePopup2.bind(this)}/>
-                        {this.state.showPopup2 ?
-                        <SnapModal
-                            text='Description'
-                        />
-                        : null
-                        }
-                    </div>
-
-                    <div className="projet3">
-                        <h3>My_cinema</h3>
-                        <img style={cine} src={Cine} onClick={this.togglePopup3.bind(this)}/>
-                        {this.state.showPopup3 ? 
-                        <CineModal
-                            text='Description'
-                        />
-                        : null
-                        }     
-                    </div>
-                </div>
-                <div className="portfolio">
-                    <div className="projet4">
-                        <h3>Tweet_academie</h3>
-                        <img style={tweet} src={Tweet} onClick={this.togglePopup4.bind(this)}/>
-                        {this.state.showPopup4 ? 
-                        <TweetModal
-                            text='Description'
-                        />
-                        : null
-                        }                        
-                    </div>
-                    <div className="projet5">
-                        <h3>My_Meetic</h3>
-                        <img style={meetic} src={Meetic} onClick={this.togglePopup5.bind(this)}/>
-                        {this.state.showPopup5 ? 
-                        <MeeticModal
-                            text='Description'
-                            closePopup={this.togglePopup6.bind(this)}
-                        />
-                        : null
-                        }   
-                    </div>
-                    <div className="projet6">
-                        <h3>My_blog</h3>
-                        <img style={blog} src={Blog} onClick={this.togglePopup6.bind(this)}/>
-                        {this.state.showPopup6 ? 
-                        <BlogModal
-                            text='Description'
-                            closePopup={this.togglePopup5.bind(this)}
-                        />
-                        : null
-                        }     
-                    </div>
-                </div>
-            </div>
-        );
-    }
+        <div className="projet3">
+          <h3>My_cinema</h3>
+          <img style={cine} src={Cine} onClick={() => togglePopup(showPopup3, setShowPopup3)}/>
+          {showPopup3 ?
+            <CineModal
+              text='Description'
+            />
+            : null
+          }
+        </div>
+      </div>
+      <div className="portfolio">
+        <div className="projet4">
+          <h3>Tweet_academie</h3>
+          <img style={tweet} src={Tweet} onClick={() => togglePopup(showPopup4, setShowPopup4)}/>
+          {showPopup4 ?
+            <TweetModal
+              text='Description'
+            />
+            : null
+          }
+        </div>
+        <div className="projet5">
+          <h3>My_Meetic</h3>
+          <img style={meetic} src={Meetic} onClick={() => togglePopup(showPopup5, setShowPopup5)}/>
+          {showPopup5 ?
+            <MeeticModal
+              text='Description'
+              closePopup={() => togglePopup(showPopup6, setShowPopup6)}
+            />
+            : null
+          }
+        </div>
+        <div className="projet6">
+          <h3>My_blog</h3>
+          <img style={blog} src={Blog} onClick={() => togglePopup(showPopup6, setShowPopup6)}/>
+          {showPopup6 ?
+            <BlogModal
+              text='Description'
+              closePopup={() => togglePopup(showPopup5, setShowPopup5)}
+            />
+            : null
+          }
+        </div>
+      </div>
+    </div>
+  );
 }
 
-  
+
 export default Portfolio;

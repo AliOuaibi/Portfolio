@@ -14,7 +14,7 @@ import * as serviceWorker from './serviceWorker';
 class App extends Component {
   render() { 
     return ( 
-      <diV>
+      <div>
         <Header title="ALI OUAIBI" button="En savoir plus"/>
         <Navigation LogoTitle="Ali Ouaibi" />
         <About/>
@@ -23,7 +23,7 @@ class App extends Component {
         <Competence/>
         <Contact/>
         <Footer title="WEB@CADEMIE"/>
-      </diV>
+      </div>
     );
   }
 }

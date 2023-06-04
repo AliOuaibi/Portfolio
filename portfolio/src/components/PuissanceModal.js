@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import '../style/Modal.css';
 import video1 from './video/puissance4.webm';
-import {SlideDown} from 'react-slidedown'
 import { AiFillGithub} from "react-icons/ai";
-import 'react-slidedown/lib/slidedown.css'
 
 class PuissanceModal extends Component {
     render() { 
         return ( 
-          <SlideDown className={'my-dropdown-slidedown'}>
+          <div className={'my-dropdown-slidedown'}>
             <div className='popupPuissance'>
             <div className='popup_inner'>
               <h1>{this.props.text}</h1>
@@ -20,7 +18,7 @@ class PuissanceModal extends Component {
               <video src={video1} width="550" height="300" controls="controls" autoplay="true" />
             </div>
             </div>
-          </SlideDown> 
+          </div>
         );
     }
 }
